@@ -1,0 +1,2 @@
+[06-Jun-2022 05:51:25 UTC] PHP Fatal error:  Cannot declare class CreatecategoriesTable, because the name is already in use in /home/sharpsud/public_html/database/migrations/2022_06_04_1654378124_create_categories_table.php on line 8
+[06-Jun-2022 05:52:00 UTC] PHP Fatal error:  Cannot declare class CreatecategoriesTable, because the name is already in use in /home/sharpsud/public_html/database/migrations/2022_06_04_1654378124_create_categories_table.php on line 8

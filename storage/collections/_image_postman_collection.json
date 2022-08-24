@@ -1,0 +1,132 @@
+{
+    "info": {
+        "_postman_id": "80c93e1a-a481-4b72-8436-434f120b6cbc",
+        "name": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "local",
+            "value": "http://127.0.0.1:8000/api/v1"
+        },
+        {
+            "key": "token",
+            "value": ""
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "image",
+            "item": [
+                {
+                    "name": "get all image",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/image",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "image"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id image",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/image/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "image",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}

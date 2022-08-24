@@ -1,0 +1,132 @@
+{
+    "info": {
+        "_postman_id": "11734aa1-ab85-42a5-bd08-90582a5a0f81",
+        "name": "Laravel",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "local",
+            "value": "http://127.0.0.1:8000/api/v1"
+        },
+        {
+            "key": "token",
+            "value": ""
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "locations",
+            "item": [
+                {
+                    "name": "get all locations",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/locations",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "locations"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id locations",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/locations/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "locations",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}

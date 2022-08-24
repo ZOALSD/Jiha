@@ -1,0 +1,34 @@
+{
+    "info": {
+        "_postman_id": "2f18ae0d-0a86-48aa-868f-ddef47fb8915",
+        "name": "sharp-Sudan",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "local",
+            "value": "http://127.0.0.1:8000/api/v1"
+        },
+        {
+            "key": "token",
+            "value": ""
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "customers",
+            "item": []
+        }
+    ]
+}

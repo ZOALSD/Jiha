@@ -1,0 +1,2073 @@
+{
+    "info": {
+        "_postman_id": "68a18dc8-0a0d-4fed-aa27-98c10f90541c",
+        "name": "Laravel",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "local",
+            "value": "http://127.0.0.1:8000/api/v1"
+        },
+        {
+            "key": "token",
+            "value": ""
+        }
+    ],
+    "item": [
+        {
+            "name": "colors",
+            "item": []
+        },
+        {
+            "name": "locations",
+            "item": [
+                {
+                    "name": "get all locations",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/locations",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "locations"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id locations",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/locations/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "locations",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "sizes",
+            "item": [
+                {
+                    "name": "get all sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Record sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Record By ID sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE Record By ID sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Multi Delete Record By IDs sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                },
+                                {
+                                    "key": "selected_data[]",
+                                    "value": "1",
+                                    "type": "text",
+                                    "description": "Record ID Integer"
+                                },
+                                {
+                                    "key": "selected_data[]",
+                                    "value": "2",
+                                    "type": "text",
+                                    "description": "Record ID Integer"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes/multi_delete",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes",
+                                "multi_delete"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "videos",
+            "item": [
+                {
+                    "name": "get all videos",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/videos",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "videos"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id videos",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/videos/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "videos",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "categories",
+            "item": [
+                {
+                    "name": "get all categories",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/categories",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "categories"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id categories",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/categories/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "categories",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "colors",
+            "item": []
+        },
+        {
+            "name": "contacts",
+            "item": [
+                {
+                    "name": "get all contacts",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/contacts",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "contacts"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id contacts",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/contacts/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "contacts",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Record contacts",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "email@example.com",
+                                    "type": "text",
+                                    "description": "email Input"
+                                },
+                                {
+                                    "key": "details",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/contacts",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "contacts"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "favorites",
+            "item": [
+                {
+                    "name": "get all favorites",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/favorites",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "favorites"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id favorites",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/favorites/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "favorites",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Record favorites",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                },
+                                {
+                                    "key": "pro_id",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/favorites",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "favorites"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE Record By ID favorites",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/favorites/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "favorites",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "image",
+            "item": [
+                {
+                    "name": "get all image",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/image",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "image"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id image",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/image/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "image",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "images",
+            "item": [
+                {
+                    "name": "get all images",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/images",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "images"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id images",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/images/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "images",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "locations",
+            "item": [
+                {
+                    "name": "get all locations",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/locations",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "locations"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id locations",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/locations/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "locations",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "productscontrollrt",
+            "item": [
+                {
+                    "name": "get all productscontrollrt",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/productscontrollrt",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "productscontrollrt"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id productscontrollrt",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/productscontrollrt/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "productscontrollrt",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "services",
+            "item": [
+                {
+                    "name": "get all services",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/services",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "services"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id services",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/services/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "services",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Record services",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "email@example.com",
+                                    "type": "text",
+                                    "description": "email Input"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/services",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "services"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "sizes",
+            "item": [
+                {
+                    "name": "get all sizes",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/sizes",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "sizes"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "videos",
+            "item": [
+                {
+                    "name": "get all videos",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/videos",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "videos"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id videos",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/videos/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "videos",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Login & Register & reset",
+            "item": [
+                {
+                    "name": "login",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "test@test.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "!2M33412a",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/login",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "logout",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "value": "ar",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/logout",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "logout"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "my account - me",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "value": "ar",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/me",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "me"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "refresh",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "value": "ar",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/refresh",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "refresh"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "change password",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "current_password",
+                                    "value": "!2M33412a",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "new_password",
+                                    "value": "Aswe!2",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_confirmation",
+                                    "value": "Aswe!2",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/change/password",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "change",
+                                "password"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "register",
+                    "protocolProfileBehavior": {
+                        "disabledSystemHeaders": {}
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "noauth"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "test",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "test@test.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "!2M33412a",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "lang",
+                                    "value": "ar",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/register",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ]
+}

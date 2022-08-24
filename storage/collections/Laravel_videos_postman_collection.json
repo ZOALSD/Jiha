@@ -1,0 +1,132 @@
+{
+    "info": {
+        "_postman_id": "01933036-d500-4166-ad6e-08c07cdbc72b",
+        "name": "Laravel",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "local",
+            "value": "http://127.0.0.1:8000/api/v1"
+        },
+        {
+            "key": "token",
+            "value": ""
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "videos",
+            "item": [
+                {
+                    "name": "get all videos",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/videos",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "videos"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id videos",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/videos/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "videos",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
