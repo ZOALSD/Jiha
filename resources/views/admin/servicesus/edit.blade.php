@@ -124,6 +124,12 @@
         {!! Form::textarea('disc', $servicesus->disc ,['class'=>'form-control','placeholder'=>trans('admin.disc')]) !!}
     </div>
 </div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+		<div class="form-group">
+				{!! Form::label('available',trans('admin.available'),['class'=>'control-label']) !!}
+{!! Form::select('available',['1'=>trans('admin.1'),'0'=>trans('admin.0'),], $servicesus->available ,['class'=>'form-control select2','placeholder'=>trans('admin.available')]) !!}
+		</div>
+</div>
 
 </div>
 		<!-- /.row -->

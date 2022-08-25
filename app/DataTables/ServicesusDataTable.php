@@ -20,6 +20,7 @@ class ServicesusDataTable extends DataTable
         return datatables($query)
             ->addColumn('actions', 'admin.servicesus.buttons.actions')
             ->addColumn('image_ID', '{!! view("admin.show_image",["image"=>$image_ID])->render() !!}')
+            ->addColumn('available', '{{ trans("admin.".$available) }}')
    		->addColumn('created_at', '{{ date("Y-m-d H:i:s",strtotime($created_at)) }}')   		->addColumn('updated_at', '{{ date("Y-m-d H:i:s",strtotime($updated_at)) }}')            ->addColumn('checkbox', '<div  class="icheck-danger">
                   <input type="checkbox" class="selected_data" name="selected_data[]" id="selectdata{{ $id }}" value="{{ $id }}" >
                   <label for="selectdata{{ $id }}"></label>
@@ -156,6 +157,11 @@ class ServicesusDataTable extends DataTable
                  'name'=>'other_phone',
                  'data'=>'other_phone',
                  'title'=>trans('admin.other_phone'),
+		    ],
+				[
+                 'name'=>'disc',
+                 'data'=>'disc',
+                 'title'=>trans('admin.disc'),
 		    ],
             [
 	                'name' => 'actions',

@@ -32,6 +32,7 @@ class ServicesusRequest extends FormRequest {
              'shop_name'=>'sometimes|nullable|string',
              'phone'=>'required|integer',
              'other_phone'=>'sometimes|nullable|integer',
+             'disc'=>'sometimes|nullable|string',
 		];
 	}
 
@@ -45,6 +46,7 @@ class ServicesusRequest extends FormRequest {
              'shop_name'=>'sometimes|nullable|string',
              'phone'=>'required|integer',
              'other_phone'=>'sometimes|nullable|integer',
+             'disc'=>'sometimes|nullable|string',
 		];
 	}
 
@@ -69,6 +71,7 @@ class ServicesusRequest extends FormRequest {
              'shop_name'=>trans('admin.shop_name'),
              'phone'=>trans('admin.phone'),
              'other_phone'=>trans('admin.other_phone'),
+             'disc'=>trans('admin.disc'),
 		];
 	}
 

@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "f85d6eca-d7d9-4dd3-a7ef-c303f5d3a851",
+        "_postman_id": "7f89e2ad-7c92-4129-a09e-0ad45076fbc0",
         "name": "sharp-Sudan",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -200,6 +200,12 @@
                                     "value": "some string",
                                     "type": "text",
                                     "description": "normal input text"
+                                },
+                                {
+                                    "key": "disc",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
                                 }
                             ]
                         },
@@ -287,6 +293,12 @@
                                 },
                                 {
                                     "key": "other_phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "disc",
                                     "value": "some string",
                                     "type": "text",
                                     "description": "normal input text"

@@ -24,6 +24,7 @@ class CreateServiceusTable extends Migration
             $table->string('phone');
             $table->string('other_phone')->nullable();
             $table->longtext('disc')->nullable();
+            $table->enum('available',['1','0']);
 			$table->timestamps();
         });
     }

@@ -20,6 +20,7 @@ class ServicesusApi extends Controller{
 		"shop_name",
 		"phone",
 		"other_phone",
+		"disc",
 	];
 
             /**

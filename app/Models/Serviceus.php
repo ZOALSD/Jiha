@@ -21,6 +21,8 @@ protected $fillable = [
         'phone',
         'other_phone',
         'disc',
+        'available',
+
 		'created_at',
 		'updated_at',
 	];
