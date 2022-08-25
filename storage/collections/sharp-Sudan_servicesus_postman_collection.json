@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "7f89e2ad-7c92-4129-a09e-0ad45076fbc0",
+        "_postman_id": "b10cbdbb-ee6c-4c73-9124-1831b05c4e22",
         "name": "sharp-Sudan",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -166,10 +166,10 @@
                                     "description": "Dropdown data (App\\Models\\User::pluck('first_name')"
                                 },
                                 {
-                                    "key": "services_type_id",
-                                    "value": "App\\Models\\Servicetype::pluck('name'",
+                                    "key": "category_id",
+                                    "value": "App\\Models\\category::pluck('name'",
                                     "type": "text",
-                                    "description": "Dropdown data (App\\Models\\Servicetype::pluck('name')"
+                                    "description": "Dropdown data (App\\Models\\category::pluck('name')"
                                 },
                                 {
                                     "key": "name",
@@ -206,6 +206,12 @@
                                     "value": "some string",
                                     "type": "text",
                                     "description": "normal input text"
+                                },
+                                {
+                                    "key": "available",
+                                    "value": "1",
+                                    "type": "text",
+                                    "description": "Dropdown data (1,0)"
                                 }
                             ]
                         },
@@ -262,10 +268,10 @@
                                     "description": "Dropdown data (App\\Models\\User::pluck('first_name')"
                                 },
                                 {
-                                    "key": "services_type_id",
-                                    "value": "App\\Models\\Servicetype::pluck('name'",
+                                    "key": "category_id",
+                                    "value": "App\\Models\\category::pluck('name'",
                                     "type": "text",
-                                    "description": "Dropdown data (App\\Models\\Servicetype::pluck('name')"
+                                    "description": "Dropdown data (App\\Models\\category::pluck('name')"
                                 },
                                 {
                                     "key": "name",
@@ -302,6 +308,12 @@
                                     "value": "some string",
                                     "type": "text",
                                     "description": "normal input text"
+                                },
+                                {
+                                    "key": "available",
+                                    "value": "1",
+                                    "type": "text",
+                                    "description": "Dropdown data (1,0)"
                                 }
                             ]
                         },

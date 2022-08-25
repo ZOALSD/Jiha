@@ -36,7 +36,7 @@ class ServicesusDataTable extends DataTable
      */
 	public function query()
     {
-        return Serviceus::query()->with(['user_id','services_type_id',])->select("serviceus.*");
+        return Serviceus::query()->with(['user_id','category_id',])->select("serviceus.*");
 
     }
     	
@@ -129,9 +129,9 @@ class ServicesusDataTable extends DataTable
                  'title'=>trans('admin.user_id'),
 		    ],
 				[
-                 'name'=>'services_type_id.name',
-                 'data'=>'services_type_id.name',
-                 'title'=>trans('admin.services_type_id'),
+                 'name'=>'category_id.name',
+                 'data'=>'category_id.name',
+                 'title'=>trans('admin.category_id'),
 		    ],
 				[
                  'name'=>'name',
@@ -162,6 +162,11 @@ class ServicesusDataTable extends DataTable
                  'name'=>'disc',
                  'data'=>'disc',
                  'title'=>trans('admin.disc'),
+		    ],
+				[
+                 'name'=>'serviceus.available',
+                 'data'=>'available',
+                 'title'=>trans('admin.available'),
 		    ],
             [
 	                'name' => 'actions',

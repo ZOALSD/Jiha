@@ -38,8 +38,8 @@
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
 	<div class="form-group">
-		{!! Form::label('services_type_id',trans('admin.services_type_id')) !!}
-		{!! Form::select('services_type_id',App\Models\Servicetype::pluck('name','id'),old('services_type_id'),['class'=>'form-control select2','placeholder'=>trans('admin.choose')]) !!}
+		{!! Form::label('category_id',trans('admin.category_id')) !!}
+		{!! Form::select('category_id',App\Models\category::pluck('name','id'),old('category_id'),['class'=>'form-control select2','placeholder'=>trans('admin.choose')]) !!}
 	</div>
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">

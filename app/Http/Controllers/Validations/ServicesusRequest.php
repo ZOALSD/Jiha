@@ -26,7 +26,7 @@ class ServicesusRequest extends FormRequest {
 	protected function onCreate() {
 		return [
              'user_id'=>'sometimes|nullable|integer',
-             'services_type_id'=>'required|integer',
+             'category_id'=>'required|integer',
              'name'=>'required|string',
              'image_ID'=>'required|image',
              'shop_name'=>'sometimes|nullable|string',
@@ -40,7 +40,7 @@ class ServicesusRequest extends FormRequest {
 	protected function onUpdate() {
 		return [
              'user_id'=>'sometimes|nullable|integer',
-             'services_type_id'=>'required|integer',
+             'category_id'=>'required|integer',
              'name'=>'required|string',
              'image_ID'=>'required|image',
              'shop_name'=>'sometimes|nullable|string',
@@ -66,7 +66,7 @@ class ServicesusRequest extends FormRequest {
 	public function attributes() {
 		return [
              'user_id'=>trans('admin.user_id'),
-             'services_type_id'=>trans('admin.services_type_id'),
+             'category_id'=>trans('admin.category_id'),
              'name'=>trans('admin.name'),
              'image_ID'=>trans('admin.image_ID'),
              'shop_name'=>trans('admin.shop_name'),

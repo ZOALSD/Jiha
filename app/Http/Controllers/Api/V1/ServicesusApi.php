@@ -14,13 +14,14 @@ class ServicesusApi extends Controller{
 	protected $selectColumns = [
 		"id",
 		"user_id",
-		"services_type_id",
+		"category_id",
 		"name",
 		"image_ID",
 		"shop_name",
 		"phone",
 		"other_phone",
 		"disc",
+		"available",
 	];
 
             /**
@@ -29,7 +30,7 @@ class ServicesusApi extends Controller{
              * @return array to assign with index & show methods
              */
             public function arrWith(){
-               return ['user_id','services_type_id',];
+               return ['user_id','category_id',];
             }
 
 

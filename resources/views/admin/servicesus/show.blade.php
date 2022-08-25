@@ -89,9 +89,9 @@
 			@endif
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<b>{{trans('admin.services_type_id')}} :</b>
-				@if(!empty($servicesus->services_type_id()->first()))
-			{{ $servicesus->services_type_id()->first()->name }}
+				<b>{{trans('admin.category_id')}} :</b>
+				@if(!empty($servicesus->category_id()->first()))
+			{{ $servicesus->category_id()->first()->name }}
 			@endif
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

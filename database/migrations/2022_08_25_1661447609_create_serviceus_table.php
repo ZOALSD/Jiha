@@ -17,14 +17,14 @@ class CreateServiceusTable extends Migration
         Schema::create('serviceus', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->foreignId("user_id")->nullable()->constrained("users")->references("id");
-            $table->foreignId("services_type_id")->nullable()->constrained("servicetypes")->references("id");
+            $table->foreignId("category_id")->nullable()->constrained("categories")->references("id");
             $table->string('name');
             $table->string('image_ID');
             $table->string('shop_name')->nullable();
             $table->string('phone');
             $table->string('other_phone')->nullable();
             $table->longtext('disc')->nullable();
-            $table->enum('available',['1','0']);
+            $table->enum('available',['1','0'])->default(1);
 			$table->timestamps();
         });
     }

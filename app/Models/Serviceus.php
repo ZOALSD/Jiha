@@ -13,7 +13,7 @@ protected $fillable = [
 		'admin_id',
         'user_id',
 
-        'services_type_id',
+        'category_id',
 
         'name',
         'image_ID',
@@ -37,12 +37,12 @@ protected $fillable = [
    }
 
 	/**
-    * services_type_id relation method
+    * category_id relation method
     * @param void
     * @return object data
     */
-   public function services_type_id(){
-      return $this->hasOne(\App\Models\Servicetype::class,'id','services_type_id');
+   public function category_id(){
+      return $this->hasOne(\App\Models\category::class,'id','category_id');
    }
 
  	/**

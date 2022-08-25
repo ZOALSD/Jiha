@@ -51,6 +51,7 @@ class Register extends Controller {
             'address' => 'string|min:3',
             'email' => 'sometimes|nullable|email|unique:users',
             'phone' => 'required|unique:users|numeric',
+            'type' => 'numeric',
             // 'device_name' => 'required',
         ]);
 
