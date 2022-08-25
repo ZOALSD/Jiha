@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "bdcff142-0294-4bef-964c-f7e9302f6144",
+        "_postman_id": "094c73db-c75e-4176-b0fe-96e6a8edc4b4",
         "name": "sharp-Sudan",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
@@ -1024,6 +1024,10 @@
             ]
         },
         {
+            "name": "generals",
+            "item": []
+        },
+        {
             "name": "image",
             "item": [
                 {
@@ -1328,6 +1332,10 @@
                     "response": []
                 }
             ]
+        },
+        {
+            "name": "orderviews",
+            "item": []
         },
         {
             "name": "productscontrollrt",
@@ -2061,6 +2069,391 @@
         {
             "name": "customers",
             "item": []
+        },
+        {
+            "name": "servicestype",
+            "item": [
+                {
+                    "name": "get all servicestype",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/servicestype",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "servicestype"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id servicestype",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/servicestype/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "servicestype",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "servicesus",
+            "item": [
+                {
+                    "name": "get all servicesus",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/servicesus",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "servicesus"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "show by id servicesus",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/servicesus/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "servicesus",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Add Record servicesus",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "App\\Models\\User::pluck('first_name'",
+                                    "type": "text",
+                                    "description": "Dropdown data (App\\Models\\User::pluck('first_name')"
+                                },
+                                {
+                                    "key": "services_type_id",
+                                    "value": "App\\Models\\Servicetype::pluck('name'",
+                                    "type": "text",
+                                    "description": "Dropdown data (App\\Models\\Servicetype::pluck('name')"
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "image_ID",
+                                    "value": null,
+                                    "type": "file",
+                                    "description": "Upload File Input"
+                                },
+                                {
+                                    "key": "shop_name",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "other_phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/servicesus",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "servicesus"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Record By ID servicesus",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "{{token}}",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "lang",
+                                    "description": "For Return Language Message default Arabic",
+                                    "type": "text",
+                                    "value": "ar"
+                                },
+                                {
+                                    "key": "user_id",
+                                    "value": "App\\Models\\User::pluck('first_name'",
+                                    "type": "text",
+                                    "description": "Dropdown data (App\\Models\\User::pluck('first_name')"
+                                },
+                                {
+                                    "key": "services_type_id",
+                                    "value": "App\\Models\\Servicetype::pluck('name'",
+                                    "type": "text",
+                                    "description": "Dropdown data (App\\Models\\Servicetype::pluck('name')"
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "image_ID",
+                                    "value": null,
+                                    "type": "file",
+                                    "description": "Upload File Input"
+                                },
+                                {
+                                    "key": "shop_name",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                },
+                                {
+                                    "key": "other_phone",
+                                    "value": "some string",
+                                    "type": "text",
+                                    "description": "normal input text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/servicesus/{PUT_YOUR_ID}",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "servicesus",
+                                "{PUT_YOUR_ID}"
+                            ]
+                        },
+                        "description": "test description"
+                    },
+                    "response": []
+                }
+            ]
         }
     ],
     "event": [

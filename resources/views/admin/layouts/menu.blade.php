@@ -461,3 +461,59 @@ with font-awesome or any other icon font library -->
 </li> --}}
 @endif
 <!--generals_end_route-->
+
+<!--servicestype_start_route-->
+@if(admin()->user()->role("servicestype_show"))
+<li class="nav-item {{active_link('servicestype','menu-open')}} ">
+  <a href="#" class="nav-link {{active_link('servicestype','active')}}">
+    <i class="nav-icon fa fa-icons"></i>
+    <p>
+      {{trans('admin.servicestype')}} 
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="{{aurl('servicestype')}}" class="nav-link  {{active_link('servicestype','active')}}">
+        <i class="fa fa-icons nav-icon"></i>
+        <p>{{trans('admin.servicestype')}} </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="{{ aurl('servicestype/create') }}" class="nav-link">
+        <i class="fas fa-plus nav-icon"></i>
+        <p>{{trans('admin.create')}} </p>
+      </a>
+    </li>
+  </ul>
+</li>
+@endif
+<!--servicestype_end_route-->
+
+<!--servicesus_start_route-->
+@if(admin()->user()->role("servicesus_show"))
+<li class="nav-item {{active_link('servicesus','menu-open')}} ">
+  <a href="#" class="nav-link {{active_link('servicesus','active')}}">
+    <i class="nav-icon fa fa-icons"></i>
+    <p>
+      {{trans('admin.servicesus')}} 
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="{{aurl('servicesus')}}" class="nav-link  {{active_link('servicesus','active')}}">
+        <i class="fa fa-icons nav-icon"></i>
+        <p>{{trans('admin.servicesus')}} </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="{{ aurl('servicesus/create') }}" class="nav-link">
+        <i class="fas fa-plus nav-icon"></i>
+        <p>{{trans('admin.create')}} </p>
+      </a>
+    </li>
+  </ul>
+</li>
+@endif
+<!--servicesus_end_route-->

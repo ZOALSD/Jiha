@@ -279,3 +279,34 @@
 </div>
 <!--generals_end-->
 @endif
+
+<!--servicestype_start-->
+<div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-primary">
+      <div class="inner">
+        <h3>{{ mK(App\Models\Servicetype::count()) }}</h3>
+        <p>{{ trans("admin.servicestype") }}</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-icons"></i>
+      </div>
+      <a href="{{ aurl("servicestype") }}" class="small-box-footer">{{ trans("admin.servicestype") }} <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+<!--servicestype_end-->
+<!--servicesus_start-->
+<div class="col-lg-3 col-6">
+    <!-- small box -->
+    <div class="small-box bg-primary">
+      <div class="inner">
+        <h3>{{ mK(App\Models\Serviceus::count()) }}</h3>
+        <p>{{ trans("admin.servicesus") }}</p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-icons"></i>
+      </div>
+      <a href="{{ aurl("servicesus") }}" class="small-box-footer">{{ trans("admin.servicesus") }} <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+</div>
+<!--servicesus_end-->

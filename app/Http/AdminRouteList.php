@@ -6,6 +6,8 @@
 * [it v 1.6.40]
 */
 return [
+	"servicesus"=>["create","read","update","delete"],
+	"servicestype"=>["create","read","update","delete"],
 	"generals"=>["read","update"],
 	"orderviews"=>["create","read","update"],
 	"customers"=>["read"],
