@@ -30,8 +30,8 @@ class ServicesusRequest extends FormRequest {
              'name'=>'required|string',
              'image_ID'=>'required|image',
              'shop_name'=>'sometimes|nullable|string',
-             'phone'=>'required|integer',
-             'other_phone'=>'sometimes|nullable|integer',
+             'phone'=>'required|numeric',
+             'other_phone'=>'sometimes|nullable|numeric',
              'disc'=>'sometimes|nullable|string',
              'available'=>'required|integer|in:1,0',
 		];
@@ -44,8 +44,8 @@ class ServicesusRequest extends FormRequest {
              'name'=>'required|string',
              'image_ID'=>'required|image',
              'shop_name'=>'sometimes|nullable|string',
-             'phone'=>'required|integer',
-             'other_phone'=>'sometimes|nullable|integer',
+             'phone'=>'required|numeric',
+             'other_phone'=>'sometimes|nullable|numeric',
              'disc'=>'sometimes|nullable|string',
              'available'=>'required|integer|in:1,0',
 		];
