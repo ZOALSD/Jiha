@@ -29,7 +29,7 @@
     <link href="{{ url("assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ url("assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ url("assets/plugins/datatables-colreorder/css/colreorder.bootstrap4.min.css") }}" rel="stylesheet" type="text/css" />
-    @if(app("l") == 'ar')
+    @if('en' == 'ar')
     <link href="{{ url("assets/plugins/datatables-bs4/css/datatables.bootstrap-rtl.css") }}" rel="stylesheet" type="text/css" />
     @endif
     <!-- DataTable Css bootstrap End -->
