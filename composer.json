@@ -22,6 +22,7 @@
         "phpanonymous/c3js": "^0.0.6",
         "phpanonymous/it": "^1.6",
         "phpoffice/phpspreadsheet": "^1.23",
+        "spatie/laravel-backup": "^6.16",
         "spatie/laravel-honeypot": "^3.0",
         "tecnickcom/tcpdf": "^6.4",
         "unisharp/laravel-filemanager": "^2.5",
