@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::group(['prefix'=>app('admin')],function(){
+Route::group(['prefix'=>app('admin'),'middleware'=>'Lang'],function(){
 	Route::get('lock/screen','Admin\AdminAuthenticated@lock_screen');
 	Route::get('theme/{id}','Admin\Dashboard@theme');
 	Route::group(['middleware'=>'admin_guest'],function(){

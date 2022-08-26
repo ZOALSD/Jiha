@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app('l') }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,20 +22,20 @@
     <!-- daterangepicker Bootstrap 4 -->
     <link rel="stylesheet" href="{{ url('assets') }}/plugins/daterangepicker/daterangepicker.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{ url('assets') }}/plugins/icheck-bootstrap/icheck-bootstrap.min{{ 'en' == 'ar'?'-rtl':'' }}.css">
+    <link rel="stylesheet" href="{{ url('assets') }}/plugins/icheck-bootstrap/icheck-bootstrap.min{{ app('l') == 'ar'?'-rtl':'' }}.css">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ url('assets') }}/plugins/jqvmap/jqvmap.min.css">
     <!-- DataTable Css bootstrap -->
     <link href="{{ url("assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ url("assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ url("assets/plugins/datatables-colreorder/css/colreorder.bootstrap4.min.css") }}" rel="stylesheet" type="text/css" />
-    @if('en' == 'ar')
+    @if(app("l") == 'ar')
     <link href="{{ url("assets/plugins/datatables-bs4/css/datatables.bootstrap-rtl.css") }}" rel="stylesheet" type="text/css" />
     @endif
     <!-- DataTable Css bootstrap End -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
     <!-- Theme style -->
-    @if('en' == 'ar')
+    @if(app('l') == 'ar')
     <link rel="stylesheet" href="{{ url('assets') }}/css/adminlte-rtl.css">
     @else
     <link rel="stylesheet" href="{{ url('assets') }}/css/adminlte.css">
@@ -54,7 +54,7 @@
     <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
     <!-- Sea -->
     <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
-    @if('en' == 'ar')
+    @if(app('l') == 'ar')
     <!-- Bootstrap 4 RTL -->
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
     <!-- Custom style for RTL -->

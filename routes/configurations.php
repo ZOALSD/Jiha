@@ -78,8 +78,7 @@ if (!function_exists('active_link')) {
 
 if (!function_exists('l')) {
 	function l($obj) {
-		return 'en';
-		// return $obj . '_' . app('l');
+		return $obj . '_' . app('l');
 	}
 }
 
