@@ -22,7 +22,7 @@
     <!-- daterangepicker Bootstrap 4 -->
     <link rel="stylesheet" href="{{ url('assets') }}/plugins/daterangepicker/daterangepicker.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{ url('assets') }}/plugins/icheck-bootstrap/icheck-bootstrap.min{{ app('l') == 'ar'?'-rtl':'' }}.css">
+    <link rel="stylesheet" href="{{ url('assets') }}/plugins/icheck-bootstrap/icheck-bootstrap.min{{ 'en' == 'ar'?'-rtl':'' }}.css">
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ url('assets') }}/plugins/jqvmap/jqvmap.min.css">
     <!-- DataTable Css bootstrap -->
@@ -35,7 +35,7 @@
     <!-- DataTable Css bootstrap End -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
     <!-- Theme style -->
-    @if(app('l') == 'ar')
+    @if('en' == 'ar')
     <link rel="stylesheet" href="{{ url('assets') }}/css/adminlte-rtl.css">
     @else
     <link rel="stylesheet" href="{{ url('assets') }}/css/adminlte.css">
@@ -54,7 +54,7 @@
     <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
     <!-- Sea -->
     <link href="https://unpkg.com/@videojs/themes@1/dist/sea/index.css" rel="stylesheet">
-    @if(app('l') == 'ar')
+    @if('en' == 'ar')
     <!-- Bootstrap 4 RTL -->
     <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
     <!-- Custom style for RTL -->
