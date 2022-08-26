@@ -81,16 +81,28 @@
     </div>
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-    <div class="form-group">
-        {!! Form::label('disc',trans('admin.disc'),['class'=>'control-label']) !!}
-            {!! Form::textarea('disc',old('disc'),['class'=>'form-control','placeholder'=>trans('admin.disc')]) !!}
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
 	<div class="form-group">
 		{!! Form::label('available',trans('admin.available')) !!}
 		{!! Form::select('available',['1'=>trans('admin.1'),'0'=>trans('admin.0'),],old('available'),['class'=>'form-control select2','placeholder'=>trans('admin.choose')]) !!}
 	</div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+    <div class="form-group">
+        {!! Form::label('price',trans('admin.price'),['class'=>' control-label']) !!}
+            {!! Form::text('price',old('price'),['class'=>'form-control','placeholder'=>trans('admin.price')]) !!}
+    </div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+	<div class="form-group">
+		{!! Form::label('delivery',trans('admin.delivery')) !!}
+		{!! Form::select('delivery',['1'=>trans('admin.1'),'0'=>trans('admin.0'),],old('delivery'),['class'=>'form-control select2','placeholder'=>trans('admin.choose')]) !!}
+	</div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+    <div class="form-group">
+        {!! Form::label('disc',trans('admin.disc'),['class'=>'control-label']) !!}
+            {!! Form::textarea('disc',old('disc'),['class'=>'form-control','placeholder'=>trans('admin.disc')]) !!}
+    </div>
 </div>
 
 </div>

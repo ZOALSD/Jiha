@@ -119,16 +119,28 @@
     </div>
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-    <div class="form-group">
-        {!! Form::label('disc',trans('admin.disc'),['class'=>'control-label']) !!}
-        {!! Form::textarea('disc', $servicesus->disc ,['class'=>'form-control','placeholder'=>trans('admin.disc')]) !!}
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
 		<div class="form-group">
 				{!! Form::label('available',trans('admin.available'),['class'=>'control-label']) !!}
 {!! Form::select('available',['1'=>trans('admin.1'),'0'=>trans('admin.0'),], $servicesus->available ,['class'=>'form-control select2','placeholder'=>trans('admin.available')]) !!}
 		</div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+    <div class="form-group">
+        {!! Form::label('price',trans('admin.price'),['class'=>'control-label']) !!}
+        {!! Form::text('price', $servicesus->price ,['class'=>'form-control','placeholder'=>trans('admin.price')]) !!}
+    </div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+		<div class="form-group">
+				{!! Form::label('delivery',trans('admin.delivery'),['class'=>'control-label']) !!}
+{!! Form::select('delivery',['1'=>trans('admin.1'),'0'=>trans('admin.0'),], $servicesus->delivery ,['class'=>'form-control select2','placeholder'=>trans('admin.delivery')]) !!}
+		</div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+    <div class="form-group">
+        {!! Form::label('disc',trans('admin.disc'),['class'=>'control-label']) !!}
+        {!! Form::textarea('disc', $servicesus->disc ,['class'=>'form-control','placeholder'=>trans('admin.disc')]) !!}
+    </div>
 </div>
 
 </div>

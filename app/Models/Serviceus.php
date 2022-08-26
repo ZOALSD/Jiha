@@ -20,9 +20,12 @@ protected $fillable = [
         'shop_name',
         'phone',
         'other_phone',
-        'disc',
         'available',
 
+        'price',
+        'delivery',
+
+        'disc',
 		'created_at',
 		'updated_at',
 	];

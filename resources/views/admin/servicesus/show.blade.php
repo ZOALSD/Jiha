@@ -79,6 +79,10 @@
 				{!! $servicesus->other_phone !!}
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<b>{{trans('admin.price')}} :</b>
+				{!! $servicesus->price !!}
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<b>{{trans('admin.disc')}} :</b>
 				{!! $servicesus->disc !!}
 			</div>
@@ -101,6 +105,10 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<b>{{trans('admin.available')}} :</b>
 				{{ trans("admin.".$servicesus->available) }}
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<b>{{trans('admin.delivery')}} :</b>
+				{{ trans("admin.".$servicesus->delivery) }}
 			</div>
 			<!-- /.row -->
 		</div>

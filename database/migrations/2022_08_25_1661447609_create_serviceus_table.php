@@ -21,10 +21,12 @@ class CreateServiceusTable extends Migration
             $table->string('name');
             $table->string('image_ID');
             $table->string('shop_name')->nullable();
-            $table->string('phone');
-            $table->string('other_phone')->nullable();
+            $table->bigInteger('phone');
+            $table->bigInteger('other_phone')->nullable();
+            $table->enum('available',['1','0'])->nullable();
+            $table->string('price');
+            $table->enum('delivery',['1','0'])->nullable();
             $table->longtext('disc')->nullable();
-            $table->enum('available',['1','0'])->default(1);
 			$table->timestamps();
         });
     }
