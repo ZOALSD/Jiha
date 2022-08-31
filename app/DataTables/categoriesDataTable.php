@@ -137,6 +137,11 @@ class categoriesDataTable extends DataTable
                 'title' => trans('admin.image'),
             ],
             [
+                'name' => 'service',
+                'data' => 'service',
+                'title' => 'service',
+            ],
+            [
                 'name' => 'actions',
                 'data' => 'actions',
                 'title' => trans('admin.actions'),

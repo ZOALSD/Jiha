@@ -78,10 +78,11 @@ class productsControllrtRequest extends FormRequest
 			'price' => trans('admin.price'),
 			'category_id' => trans('admin.category_id'),
 			'image' => trans('admin.image'),
-			'color' => trans('admin.color'),
-			'size_id' => trans('admin.size_id'),
+			'colors' => trans('admin.color'),
+			'sizes' => trans('admin.size_id'),
 			'desc_en' => trans('admin.desc_en'),
 			'desc_ar' => trans('admin.desc_ar'),
+			'available' => 'available',
 		];
 	}
 

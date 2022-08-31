@@ -28,6 +28,7 @@ class categoriesRequest extends FormRequest {
              'name'=>'required|string',
              'parent_id'=>'sometimes|nullable|numeric',
              'image'=>'sometimes|nullable|file|image',
+			 'service' => 'sometimes|nullable|boolean'
 		];
 	}
 
@@ -36,6 +37,7 @@ class categoriesRequest extends FormRequest {
              'name'=>'required|string',
              'parent_id'=>'sometimes|nullable|numeric',
              'image'=>'sometimes|nullable|file|image',
+			 'service' => 'sometimes|nullable|boolean'
 		];
 	}
 
@@ -56,6 +58,7 @@ class categoriesRequest extends FormRequest {
              'name'=>trans('admin.name'),
              'parent_id'=>trans('admin.parent_id'),
              'image'=>trans('admin.image'),
+             'service'=>trans('admin.image'),
 		];
 	}
 

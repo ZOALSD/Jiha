@@ -57,6 +57,13 @@
     </div>
 </div>
 
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+	<div class="form-group">
+		{!! Form::label('service','is service') !!}
+		{!! Form::select('service',['1'=>trans('admin.1'),'0'=>trans('admin.0'),],0,['class'=>'form-control select2','placeholder'=>trans('admin.choose')]) !!}
+	</div>
+</div>
+
 </div>
 		<!-- /.row -->
 	</div>

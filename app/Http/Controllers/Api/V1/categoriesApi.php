@@ -10,6 +10,7 @@ use App\Models\category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Serviceus;
 use App\Http\Controllers\ValidationsApi\V1\categoriesRequest;
 // Auto Controller Maker By Baboon Script
 // Baboon Maker has been Created And Developed By  [it v 1.6.40]
@@ -20,7 +21,8 @@ class categoriesApi extends Controller
         "id",
         "name",
         //  "parent_id",
-        "image"
+        "image",
+        "service"
     ];
 
     protected $selectPro = [
@@ -82,6 +84,11 @@ class categoriesApi extends Controller
     //reTurn Categorise OR Data
     public function SupCategorise($id)
     {
+        $service = category::where(['Parent_id' => $id , 'service' => 1])->count();
+        if($service){
+           $data = Serviceus::where('category_id',$id)->get();
+            return response()->json(["Data" => $data, "Sup" => 0], 200);
+        }
         $count = category::where('Parent_id', $id)->count();
 
         if ($count == 0) {

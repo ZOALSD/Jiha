@@ -18,6 +18,7 @@ protected $fillable = [
         'name',
         'parent_id',
         'image',
+		'service',
 		'created_at',
 		'updated_at',
 		'deleted_at',

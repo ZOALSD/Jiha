@@ -21,6 +21,7 @@ class CreatecategoriesTable extends Migration
             $table->string('name');
             $table->bigInteger('parent_id')->nullable();
             $table->string('image')->nullable();
+            $table->boolean('service')->default(0);
             $table->softDeletes();
 
             $table->timestamps();

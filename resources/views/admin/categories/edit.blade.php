@@ -76,7 +76,7 @@
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 image">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="'image'">{{ trans('admin.image') }}</label>
                 <div class="input-group">
@@ -90,10 +90,19 @@
                 </div>
             </div>
         </div>
+	
+
         <div class="col-md-2" style="padding-top: 30px;">
             @include("admin.show_image",["image"=>$categories->image])
         </div>
     </div>
+</div>
+
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+	<div class="form-group">
+		{!! Form::label('service','is service') !!}
+		{!! Form::select('service',['1'=>trans('admin.1'),'0'=>trans('admin.0'),],$categories->service,['class'=>'form-control select2','placeholder'=>trans('admin.choose')]) !!}
+	</div>
 </div>
 
 </div>
