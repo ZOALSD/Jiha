@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Http\Controllers\ValidationsApi\V1;
 
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class productsControllrtRequest extends FormRequest {
+class productsControllrtRequest extends FormRequest
+{
 
 	/**
 	 * Baboon Script By [it v 1.6.40]
@@ -13,7 +15,8 @@ class productsControllrtRequest extends FormRequest {
 	 *
 	 * @return bool
 	 */
-	public function authorize() {
+	public function authorize()
+	{
 		return true;
 	}
 
@@ -23,36 +26,42 @@ class productsControllrtRequest extends FormRequest {
 	 *
 	 * @return array (onCreate,onUpdate,rules) methods
 	 */
-	protected function onCreate() {
+	protected function onCreate()
+	{
 		return [
-             'name'=>'required|string',
-             'price'=>'sometimes|nullable|integer',
-             'category_id'=>'sometimes|nullable|numeric',
-             'image'=>'sometimes|nullable|file|image',
-             'color'=>'required|string',
-             'size_id'=>'required|integer',
-             'desc_en'=>'required|string',
-             'desc_ar'=>'',
+			'name' => 'required|string',
+			'price' => 'sometimes|nullable',
+			'category_id' => 'sometimes|nullable|numeric',
+			'image' => 'sometimes|nullable|file|image',
+			'colors' => 'required',
+			'sizes' => 'required|string',
+			'desc_en' => 'required|string',
+			'desc_ar' => 'required|string',
+			'available' => 'required',
+		];
+	}
+
+	protected function onUpdate()
+	{
+		return [
+			'name' => 'sometimes|string',
+			'price' => 'sometimes|nullable|integer',
+			'category_id' => 'sometimes|nullable|numeric',
+			'image' => 'sometimes|nullable|file|image',
+			'colors' => 'sometimes',
+			'sizes' => 'sometimes|string',
+			'desc_en' => 'sometimes|string',
+			'desc_ar' => 'sometimes',
+			'available' => 'sometimes'
+
 		];
 	}
 
 
-	protected function onUpdate() {
-		return [
-             'name'=>'required|string',
-             'price'=>'sometimes|nullable|integer',
-             'category_id'=>'sometimes|nullable|numeric',
-             'image'=>'sometimes|nullable|file|image',
-             'color'=>'required|string',
-             'size_id'=>'required|integer',
-             'desc_en'=>'required|string',
-             'desc_ar'=>'',
-		];
-	}
-
-	public function rules() {
+	public function rules()
+	{
 		return request()->isMethod('put') || request()->isMethod('patch') ?
-		$this->onUpdate() : $this->onCreate();
+			$this->onUpdate() : $this->onCreate();
 	}
 
 
@@ -62,16 +71,17 @@ class productsControllrtRequest extends FormRequest {
 	 *
 	 * @return array
 	 */
-	public function attributes() {
+	public function attributes()
+	{
 		return [
-             'name'=>trans('admin.name'),
-             'price'=>trans('admin.price'),
-             'category_id'=>trans('admin.category_id'),
-             'image'=>trans('admin.image'),
-             'color'=>trans('admin.color'),
-             'size_id'=>trans('admin.size_id'),
-             'desc_en'=>trans('admin.desc_en'),
-             'desc_ar'=>trans('admin.desc_ar'),
+			'name' => trans('admin.name'),
+			'price' => trans('admin.price'),
+			'category_id' => trans('admin.category_id'),
+			'image' => trans('admin.image'),
+			'color' => trans('admin.color'),
+			'size_id' => trans('admin.size_id'),
+			'desc_en' => trans('admin.desc_en'),
+			'desc_ar' => trans('admin.desc_ar'),
 		];
 	}
 
@@ -81,17 +91,15 @@ class productsControllrtRequest extends FormRequest {
 	 *
 	 * @return redirect
 	 */
-	public function response(array $errors) {
+	public function response(array $errors)
+	{
 		return $this->ajax() || $this->wantsJson() ?
-		response([
-			'status' => false,
-			'StatusCode' => 422,
-			'StatusType' => 'Unprocessable',
-			'errors' => $errors,
-		], 422) :
-		back()->withErrors($errors)->withInput(); // Redirect back
+			response([
+				'status' => false,
+				'StatusCode' => 422,
+				'StatusType' => 'Unprocessable',
+				'errors' => $errors,
+			], 422) :
+			back()->withErrors($errors)->withInput(); // Redirect back
 	}
-
-
-
 }

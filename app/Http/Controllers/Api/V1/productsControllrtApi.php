@@ -83,24 +83,25 @@ class productsControllrtApi extends Controller
      * Store a newly created resource in storage. Api
      * @return \Illuminate\Http\Response
      */
-    // public function store(productsControllrtRequest $request)
-    // {
-    //     $data = $request->except("_token");
+    public function store(productsControllrtRequest $request)
+    {
+        $data = $request->except("_token", "_method");
+        $data['image'] = "";
+        $data['admin_id'] = 1;
 
-    //     $data["user_id"] = auth()->id();
-    //     $data["image"] = "";
-    //     $product = product::create($data);
-    //     if (request()->hasFile("image")) {
-    //         $product->image = it()->upload("image", "productscontrollrt/" . $product->id);
-    //         $product->save();
-    //     }
+        $product = product::create($data);
 
-    //     $product = product::with($this->arrWith())->find($product->id, $this->selectColumns);
-    //     return successResponseJson([
-    //         "message" => trans("admin.added"),
-    //         "data" => $product
-    //     ]);
-    // }
+        if (request()->hasFile('image')) {
+            $product->image = it()->upload('image', 'productscontrollrt/' . $product->id);
+            $product->save();
+        }
+
+        $product = product::with($this->arrWith())->find($product->id, $this->selectColumns);
+        return successResponseJson([
+            "message" => trans("admin.added"),
+            "data" => $product
+        ]);
+    }
 
 
     /**
@@ -122,48 +123,34 @@ class productsControllrtApi extends Controller
             "data" => $product
         ]);;
     }
+    public function updateFillableColumns() {
+        $fillableCols = [];
+        foreach (array_keys((new productsControllrtRequest)->attributes()) as $fillableUpdate) {
+           if (!is_null(request($fillableUpdate))) {
+           $fillableCols[$fillableUpdate] = request($fillableUpdate);
+         }
+        }
+        return $fillableCols;
+    }
 
 
-    // /**
-    //  * Baboon Api Script By [it v 1.6.40]
-    //  * update a newly created resource in storage.
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function updateFillableColumns()
-    // {
-    //     $fillableCols = [];
-    //     foreach (array_keys((new productsControllrtRequest)->attributes()) as $fillableUpdate) {
-    //         if (!is_null(request($fillableUpdate))) {
-    //             $fillableCols[$fillableUpdate] = request($fillableUpdate);
-    //         }
-    //     }
-    //     return $fillableCols;
-    // }
+    public function update($id,productsControllrtRequest $request)
+    {
+        $product = product::find($id);
+        if(is_null($product) || empty($product)){
+         return errorResponseJson([
+          "message"=>trans("admin.undefinedRecord")
+         ]);
+             }
+         $data = $request->all();
+      product::where("id",$id)->update($data);
 
-    // public function update(productsControllrtRequest $request, $id)
-    // {
-    //     $product = product::find($id);
-    //     if (is_null($product) || empty($product)) {
-    //         return errorResponseJson([
-    //             "message" => trans("admin.undefinedRecord")
-    //         ]);
-    //     }
-
-    //     $data = $this->updateFillableColumns();
-
-    //     $data["user_id"] = auth()->id();
-    //     if (request()->hasFile("image")) {
-    //         it()->delete($product->image);
-    //         $data["image"] = it()->upload("image", "productscontrollrt/" . $product->id);
-    //     }
-    //     product::where("id", $id)->update($data);
-
-    //     $product = product::with($this->arrWith())->find($id, $this->selectColumns);
-    //     return successResponseJson([
-    //         "message" => trans("admin.updated"),
-    //         "data" => $product
-    //     ]);
-    // }
+      $product = product::with($this->arrWith())->find($id,$this->selectColumns);
+      return successResponseJson([
+       "message"=>trans("admin.updated"),
+       "data"=> $product
+       ]);
+    }
 
     // /**
     //  * Baboon Api Script By [it v 1.6.40]
