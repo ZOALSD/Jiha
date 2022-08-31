@@ -84,7 +84,7 @@ class categoriesApi extends Controller
     //reTurn Categorise OR Data
     public function SupCategorise($id)
     {
-        $service = category::where(['Parent_id' => $id , 'service' => 1])->count();
+        $service = category::where(['id'=>$id , 'service' => 1])->count();
         if($service){
            $data = Serviceus::where('category_id',$id)->get();
             return response()->json(["Data" => $data, "Sup" => 0], 200);
