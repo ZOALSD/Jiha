@@ -146,10 +146,12 @@ class productsControllrt extends Controller
     if ($request->colors) $data['colors'] = implode(',', $data['colors']);
     $data['available'] = $request->available;
     $data['admin_id'] = admin()->id();
+
     if (request()->hasFile('image')) {
       it()->delete($productscontrollrt->image);
       $data['image'] = it()->upload('image', 'productscontrollrt');
     }
+    
     product::where('id', $id)->update($data);
     $redirect = isset($request["save_back"]) ? "/" . $id . "/edit" : "";
     return redirectWithSuccess(aurl('productscontrollrt' . $redirect), trans('admin.updated'));
