@@ -85,9 +85,15 @@ class categoriesApi extends Controller
     public function SupCategorise($id)
     {
         $service = category::where(['id'=>$id , 'service' => 1])->count();
+
         if($service){
-           $data = Serviceus::where('category_id',$id)->get();
-            return response()->json(["Data" => $data, "Sup" => 0], 200);
+           $data = Serviceus::with('category')->where('category_id',$id)->get();
+
+            return response()->json([
+             "Data" => $data, "Sup" => 0 ,
+             'service' => category::where(['id'=>$id , 'service' => 1])->value('name')
+            ], 200);
+            
         }
         $count = category::where('Parent_id', $id)->count();
 

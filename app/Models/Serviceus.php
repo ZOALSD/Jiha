@@ -44,7 +44,7 @@ protected $fillable = [
     * @param void
     * @return object data
     */
-   public function category_id(){
+   public function category(){
       return $this->hasOne(\App\Models\category::class,'id','category_id');
    }
 
