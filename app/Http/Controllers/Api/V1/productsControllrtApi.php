@@ -6,10 +6,7 @@ use Validator;
 
 use Carbon\Carbon;
 use App\Models\product;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\productsResource;
 use App\Http\Controllers\ValidationsApi\V1\productsControllrtRequest;
 
 // Auto Controller Maker By Baboon Script
