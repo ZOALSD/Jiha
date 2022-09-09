@@ -25,30 +25,26 @@ class ServicesusRequest extends FormRequest {
 	 */
 	protected function onCreate() {
 		return [
-             'user_id'=>'sometimes|nullable|integer',
              'category_id'=>'required|integer',
-             'name'=>'required|string',
-             'image_ID'=>'required|image',
-             'shop_name'=>'sometimes|nullable|string',
-             'phone'=>'required|numeric',
-             'other_phone'=>'sometimes|nullable|numeric',
              'available'=>'',
-             'disc'=>'sometimes|nullable|string',
+             'price'=>'',
+             'delivery'=>'in:1,0',
+             'disc'=>'required|numeric',
+             'image'=>'sometimes|nullable|numeric',
+             'title'=>'sometimes|nullable|file|image',
 		];
 	}
 
 
 	protected function onUpdate() {
 		return [
-             'user_id'=>'sometimes|nullable|integer',
              'category_id'=>'required|integer',
-             'name'=>'required|string',
-             'image_ID'=>'required|image',
-             'shop_name'=>'sometimes|nullable|string',
-             'phone'=>'required|numeric',
-             'other_phone'=>'sometimes|nullable|numeric',
              'available'=>'',
-             'disc'=>'sometimes|nullable|string',
+             'price'=>'',
+             'delivery'=>'in:1,0',
+             'disc'=>'required|numeric',
+             'image'=>'sometimes|nullable|numeric',
+             'title'=>'sometimes|nullable|file|image',
 		];
 	}
 
@@ -66,15 +62,13 @@ class ServicesusRequest extends FormRequest {
 	 */
 	public function attributes() {
 		return [
-             'user_id'=>trans('admin.user_id'),
              'category_id'=>trans('admin.category_id'),
-             'name'=>trans('admin.name'),
-             'image_ID'=>trans('admin.image_ID'),
-             'shop_name'=>trans('admin.shop_name'),
-             'phone'=>trans('admin.phone'),
-             'other_phone'=>trans('admin.other_phone'),
              'available'=>trans('admin.available'),
+             'price'=>trans('admin.price'),
+             'delivery'=>trans('admin.delivery'),
              'disc'=>trans('admin.disc'),
+             'image'=>trans('admin.image'),
+             'title'=>trans('admin.title'),
 		];
 	}
 

@@ -24,7 +24,9 @@ class User extends Authenticatable {
         'phone',
 		'otp',
 		'type',
-		'pic'
+		'pic',
+		'id_image',
+		'other_phone'
 	];
 
 	/**

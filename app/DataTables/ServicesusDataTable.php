@@ -19,14 +19,16 @@ class ServicesusDataTable extends DataTable
     {
         return datatables($query)
             ->addColumn('actions', 'admin.servicesus.buttons.actions')
-            ->addColumn('image_ID', '{!! view("admin.show_image",["image"=>$image_ID])->render() !!}')
             ->addColumn('available', '{{ trans("admin.".$available) }}')
             ->addColumn('delivery', '{{ trans("admin.".$delivery) }}')
+            ->addColumn('image', '<a href="{{ it()->url($image) }}" target="_blank"><i class="fa fa-download fa-2x"></i></a>')
+            ->addColumn('active', '{{ trans("admin.".$active) }}')
+            ->addColumn('title', '{!! view("admin.show_image",["image"=>$title])->render() !!}')
    		->addColumn('created_at', '{{ date("Y-m-d H:i:s",strtotime($created_at)) }}')   		->addColumn('updated_at', '{{ date("Y-m-d H:i:s",strtotime($updated_at)) }}')            ->addColumn('checkbox', '<div  class="icheck-danger">
                   <input type="checkbox" class="selected_data" name="selected_data[]" id="selectdata{{ $id }}" value="{{ $id }}" >
                   <label for="selectdata{{ $id }}"></label>
                 </div>')
-            ->rawColumns(['checkbox','actions',"image_ID",]);
+            ->rawColumns(['checkbox','actions',"image","title",]);
     }
   
 
@@ -135,39 +137,39 @@ class ServicesusDataTable extends DataTable
                  'title'=>trans('admin.category_id'),
 		    ],
 				[
-                 'name'=>'name',
-                 'data'=>'name',
-                 'title'=>trans('admin.name'),
-		    ],
-				[
-                 'name'=>'image_ID',
-                 'data'=>'image_ID',
-                 'title'=>trans('admin.image_ID'),
-		    ],
-				[
-                 'name'=>'shop_name',
-                 'data'=>'shop_name',
-                 'title'=>trans('admin.shop_name'),
-		    ],
-				[
-                 'name'=>'phone',
-                 'data'=>'phone',
-                 'title'=>trans('admin.phone'),
-		    ],
-				[
-                 'name'=>'other_phone',
-                 'data'=>'other_phone',
-                 'title'=>trans('admin.other_phone'),
-		    ],
-				[
                  'name'=>'serviceus.available',
                  'data'=>'available',
                  'title'=>trans('admin.available'),
 		    ],
 				[
+                 'name'=>'price',
+                 'data'=>'price',
+                 'title'=>trans('admin.price'),
+		    ],
+				[
+                 'name'=>'serviceus.delivery',
+                 'data'=>'delivery',
+                 'title'=>trans('admin.delivery'),
+		    ],
+				[
                  'name'=>'disc',
                  'data'=>'disc',
                  'title'=>trans('admin.disc'),
+		    ],
+				[
+                 'name'=>'image',
+                 'data'=>'image',
+                 'title'=>trans('admin.image'),
+		    ],
+				[
+                 'name'=>'serviceus.active',
+                 'data'=>'active',
+                 'title'=>trans('admin.active'),
+		    ],
+				[
+                 'name'=>'title',
+                 'data'=>'title',
+                 'title'=>trans('admin.title'),
 		    ],
             [
 	                'name' => 'actions',

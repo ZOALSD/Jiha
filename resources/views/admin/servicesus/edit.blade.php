@@ -74,51 +74,6 @@
 		</div>
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-    <div class="form-group">
-        {!! Form::label('name',trans('admin.name'),['class'=>'control-label']) !!}
-        {!! Form::text('name', $servicesus->name ,['class'=>'form-control','placeholder'=>trans('admin.name')]) !!}
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 image_ID">
-    <div class="row">
-        <div class="col-md-9">
-            <div class="form-group">
-                <label for="'image_ID'">{{ trans('admin.image_ID') }}</label>
-                <div class="input-group">
-                    <div class="custom-file">
-                        {!! Form::file('image_ID',['class'=>'custom-file-input','placeholder'=>trans('admin.image_ID'),"accept"=>it()->acceptedMimeTypes("image"),"id"=>"image_ID"]) !!}
-                        {!! Form::label('image_ID',trans('admin.image_ID'),['class'=>'custom-file-label']) !!}
-                    </div>
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="">{{ trans('admin.upload') }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-2" style="padding-top: 30px;">
-            @include("admin.show_image",["image"=>$servicesus->image_ID])
-        </div>
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-    <div class="form-group">
-        {!! Form::label('shop_name',trans('admin.shop_name'),['class'=>'control-label']) !!}
-        {!! Form::text('shop_name', $servicesus->shop_name ,['class'=>'form-control','placeholder'=>trans('admin.shop_name')]) !!}
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-    <div class="form-group">
-        {!! Form::label('phone',trans('admin.phone'),['class'=>'control-label']) !!}
-        {!! Form::text('phone', $servicesus->phone ,['class'=>'form-control','placeholder'=>trans('admin.phone')]) !!}
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
-    <div class="form-group">
-        {!! Form::label('other_phone',trans('admin.other_phone'),['class'=>'control-label']) !!}
-        {!! Form::text('other_phone', $servicesus->other_phone ,['class'=>'form-control','placeholder'=>trans('admin.other_phone')]) !!}
-    </div>
-</div>
-<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
 		<div class="form-group">
 				{!! Form::label('available',trans('admin.available'),['class'=>'control-label']) !!}
 {!! Form::select('available',['1'=>trans('admin.1'),'0'=>trans('admin.0'),], $servicesus->available ,['class'=>'form-control select2','placeholder'=>trans('admin.available')]) !!}
@@ -140,6 +95,46 @@
     <div class="form-group">
         {!! Form::label('disc',trans('admin.disc'),['class'=>'control-label']) !!}
         {!! Form::textarea('disc', $servicesus->disc ,['class'=>'form-control','placeholder'=>trans('admin.disc')]) !!}
+    </div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 image">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="'image'">{{ trans('admin.image') }}</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        {!! Form::file('image',['class'=>'custom-file-input','placeholder'=>trans('admin.image'),"accept"=>it()->acceptedMimeTypes(""),"id"=>"image"]) !!}
+                        {!! Form::label('image',trans('admin.image'),['class'=>'custom-file-label']) !!}
+                    </div>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="">{{ trans('admin.upload') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" style="padding-top: 30px;">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                </div>
+                <div class="col-md-6">
+                    <a href="{{ it()->url($servicesus->image) }}" target="_blank"><i class="fa fa-download fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+		<div class="form-group">
+				{!! Form::label('active',trans('admin.active'),['class'=>'control-label']) !!}
+{!! Form::select('active',['1'=>trans('admin.1'),'0'=>trans('admin.0'),], $servicesus->active ,['class'=>'form-control select2','placeholder'=>trans('admin.active')]) !!}
+		</div>
+</div>
+<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+    <div class="form-group">
+        {!! Form::label('title',trans('admin.title'),['class'=>'control-label']) !!}
+        {!! Form::text('title', $servicesus->title ,['class'=>'form-control','placeholder'=>trans('admin.title')]) !!}
     </div>
 </div>
 

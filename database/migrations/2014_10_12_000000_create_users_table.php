@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration {
 			$table->boolean('status')->default(false);
 			$table->enum('type',['1','0'])->default(0);
 			$table->string('pic')->nullable();
+			$table->string('id_image')->nullable();/////===
+			$table->string('other_phone')->nullable();/////===
 			$table->rememberToken();
 			$table->timestamps();
 			$table->softDeletes();

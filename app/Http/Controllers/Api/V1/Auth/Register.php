@@ -117,6 +117,20 @@ class Register extends Controller
     }
 
 
+    public function upgradeAccount(Request $request)
+    {
+        $request->validate([
+            'other_phone' => 'required|string',
+            'id_image' => 'required|file',
+        ]);
+
+        if (request()->hasFile('id_image')) {
+            $image = it()->upload('id_image', 'users_id/' . auth('sanctum')->id());
+        }
+
+    
+        User::where('id',auth('sanctum')->id())->update(['other_phone' => $request->other_phone , 'id_image' => $image]);
+    }
     public function UserUpdate(Request $request)
     {
         $id = Auth::user()->id;

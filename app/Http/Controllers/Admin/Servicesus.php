@@ -61,10 +61,10 @@ class Servicesus extends Controller
             public function store(ServicesusRequest $request)
             {
                 $data = $request->except("_token", "_method");
-            	$data['image_ID'] = "";
+            	$data['image'] = "";
 		  		$servicesus = Serviceus::create($data); 
-               if(request()->hasFile('image_ID')){
-              $servicesus->image_ID = it()->upload('image_ID','servicesus/'.$servicesus->id);
+               if(request()->hasFile('image')){
+              $servicesus->image = it()->upload('image','servicesus/'.$servicesus->id);
               $servicesus->save();
               }
 
@@ -133,9 +133,9 @@ class Servicesus extends Controller
               	return backWithError(trans("admin.undefinedRecord"),aurl("servicesus"));
               }
               $data = $this->updateFillableColumns(); 
-               if(request()->hasFile('image_ID')){
-              it()->delete($servicesus->image_ID);
-              $data['image_ID'] = it()->upload('image_ID','servicesus');
+               if(request()->hasFile('image')){
+              it()->delete($servicesus->image);
+              $data['image'] = it()->upload('image','servicesus');
                } 
               Serviceus::where('id',$id)->update($data);
 
@@ -157,8 +157,8 @@ class Servicesus extends Controller
 		if(is_null($servicesus) || empty($servicesus)){
 			return backWithSuccess(trans('admin.undefinedRecord'),aurl("servicesus"));
 		}
-               		if(!empty($servicesus->image_ID)){
-			it()->delete($servicesus->image_ID);		}
+               		if(!empty($servicesus->image)){
+			it()->delete($servicesus->image);		}
 
 		it()->delete('serviceus',$id);
 		$servicesus->delete();
@@ -174,8 +174,8 @@ class Servicesus extends Controller
 				if(is_null($servicesus) || empty($servicesus)){
 					return backWithError(trans('admin.undefinedRecord'),aurl("servicesus"));
 				}
-                    					if(!empty($servicesus->image_ID)){
-				  it()->delete($servicesus->image_ID);
+                    					if(!empty($servicesus->image)){
+				  it()->delete($servicesus->image);
 				}
 				it()->delete('serviceus',$id);
 				$servicesus->delete();
@@ -187,8 +187,8 @@ class Servicesus extends Controller
 				return backWithError(trans('admin.undefinedRecord'),aurl("servicesus"));
 			}
                     
-			if(!empty($servicesus->image_ID)){
-			 it()->delete($servicesus->image_ID);
+			if(!empty($servicesus->image)){
+			 it()->delete($servicesus->image);
 			}			it()->delete('serviceus',$data);
 			$servicesus->delete();
 			return redirectWithSuccess(aurl("servicesus"),trans('admin.deleted'));

@@ -13,15 +13,13 @@ use App\Http\Controllers\ValidationsApi\V1\ServicesusRequest;
 class ServicesusApi extends Controller{
 	protected $selectColumns = [
 		"id",
-		"user_id",
 		"category_id",
-		"name",
-		"image_ID",
-		"shop_name",
-		"phone",
-		"other_phone",
 		"available",
+		"price",
+		"delivery",
 		"disc",
+		"image",
+		"title",
 	];
 
             /**
@@ -55,10 +53,10 @@ class ServicesusApi extends Controller{
     {
     	$data = $request->except("_token");
     	
-                $data["image_ID"] = "";
+                $data["image"] = "";
         $Serviceus = Serviceus::create($data); 
-               if(request()->hasFile("image_ID")){
-              $Serviceus->image_ID = it()->upload("image_ID","servicesus/".$Serviceus->id);
+               if(request()->hasFile("image")){
+              $Serviceus->image = it()->upload("image","servicesus/".$Serviceus->id);
               $Serviceus->save();
               }
 
@@ -117,9 +115,9 @@ class ServicesusApi extends Controller{
 
             	$data = $this->updateFillableColumns();
                  
-               if(request()->hasFile("image_ID")){
-              it()->delete($Serviceus->image_ID);
-              $data["image_ID"] = it()->upload("image_ID","servicesus/".$Serviceus->id);
+               if(request()->hasFile("image")){
+              it()->delete($Serviceus->image);
+              $data["image"] = it()->upload("image","servicesus/".$Serviceus->id);
                }
               Serviceus::where("id",$id)->update($data);
 
@@ -145,8 +143,8 @@ class ServicesusApi extends Controller{
             	}
 
 
-              if(!empty($servicesus->image_ID)){
-               it()->delete($servicesus->image_ID);
+              if(!empty($servicesus->image)){
+               it()->delete($servicesus->image);
               }
                it()->delete("serviceus",$id);
 
@@ -170,8 +168,8 @@ class ServicesusApi extends Controller{
 	            	 ]);
 	            	}
 
-                    	if(!empty($servicesus->image_ID)){
-                    	it()->delete($servicesus->image_ID);
+                    	if(!empty($servicesus->image)){
+                    	it()->delete($servicesus->image);
                     	}
                     	it()->delete("serviceus",$id);
                     	$servicesus->delete();
@@ -187,8 +185,8 @@ class ServicesusApi extends Controller{
 	            	 ]);
 	            	}
  
-                    	if(!empty($servicesus->image_ID)){
-                    	it()->delete($servicesus->image_ID);
+                    	if(!empty($servicesus->image)){
+                    	it()->delete($servicesus->image);
                     	}
                     	it()->delete("serviceus",$data);
 
