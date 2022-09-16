@@ -21,12 +21,13 @@ class CreateServiceusTable extends Migration
             $table->enum('available',['1','0'])->nullable();
             $table->string('price')->nullable();
             $table->enum('delivery',['1','0'])->nullable();
-            $table->bigInteger('disc');
-            $table->bigInteger('image')->nullable();
-            $table->enum('active',['1','0'])->nullable();
+            $table->text('disc')->nullable();
+            $table->string('image')->nullable();
+            $table->enum('active',['1','0'])->default(1);
             $table->string('title')->nullable();
 			$table->softDeletes();
-			$table->timestamps();
+
+			$table->timestamps();
         });
     }
 
