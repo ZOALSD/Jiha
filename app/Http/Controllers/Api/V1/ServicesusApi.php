@@ -39,7 +39,7 @@ class ServicesusApi extends Controller{
              */
             public function index()
             {
-            	$Serviceus = Serviceus::select($this->selectColumns)->with($this->arrWith())->orderBy("id","desc")->paginate(15);
+            	$Serviceus = Serviceus::select($this->selectColumns)->with($this->arrWith())->orderBy("id","desc")->get();
                return successResponseJson(["data"=>$Serviceus]);
             }
 
