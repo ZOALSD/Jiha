@@ -31,9 +31,9 @@ class ServicesusRequest extends FormRequest {
              'price'=>'',
              'delivery'=>'in:1,0',
              'disc'=>'required|string',
-             'image'=>'sometimes|nullable|string',
+             'image'=>'sometimes|nullable|file|image',
              'active'=>'',
-             'title'=>'sometimes|nullable|file|image',
+             'title'=>'sometimes|nullable|string',
 		];
 	}
 
@@ -45,9 +45,9 @@ class ServicesusRequest extends FormRequest {
              'price'=>'',
              'delivery'=>'in:1,0',
              'disc'=>'required|string',
-             'image'=>'sometimes|nullable|string',
+             'image'=>'sometimes|nullable|file|image',
              'active'=>'',
-             'title'=>'sometimes|nullable|file|image',
+             'title'=>'sometimes|nullable|string',
 		];
 	}
 
