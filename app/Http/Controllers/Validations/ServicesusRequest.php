@@ -30,8 +30,8 @@ class ServicesusRequest extends FormRequest {
              'available'=>'',
              'price'=>'',
              'delivery'=>'in:1,0',
-             'disc'=>'required|numeric',
-             'image'=>'sometimes|nullable|numeric',
+             'disc'=>'required|string',
+             'image'=>'sometimes|nullable|string',
              'active'=>'',
              'title'=>'sometimes|nullable|file|image',
 		];
@@ -44,8 +44,8 @@ class ServicesusRequest extends FormRequest {
              'available'=>'',
              'price'=>'',
              'delivery'=>'in:1,0',
-             'disc'=>'required|numeric',
-             'image'=>'sometimes|nullable|numeric',
+             'disc'=>'required|string',
+             'image'=>'sometimes|nullable|string',
              'active'=>'',
              'title'=>'sometimes|nullable|file|image',
 		];
