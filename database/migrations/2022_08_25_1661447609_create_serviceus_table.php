@@ -18,16 +18,15 @@ class CreateServiceusTable extends Migration
             $table->bigIncrements('id');
             $table->foreignId("user_id")->nullable()->constrained("users")->references("id");
             $table->foreignId("category_id")->nullable()->constrained("categories")->references("id");
-            $table->enum('available',['1','0'])->nullable();
-            $table->string('price')->nullable();
-            $table->enum('delivery',['1','0'])->nullable();
-            $table->text('disc')->nullable();
+            $table->enum('available',['1','0']);
+            $table->bigInteger('price');
+            $table->enum('delivery',['1','0']);
+            $table->longtext('disc')->nullable();
             $table->string('image')->nullable();
-            $table->enum('active',['1','0'])->default(1);
+            $table->enum('active',['1','0'])->nullable();
             $table->string('title')->nullable();
 			$table->softDeletes();
-
-			$table->timestamps();
+			$table->timestamps();
         });
     }
 

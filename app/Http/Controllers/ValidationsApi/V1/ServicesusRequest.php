@@ -26,12 +26,12 @@ class ServicesusRequest extends FormRequest {
 	protected function onCreate() {
 		return [
              'category_id'=>'required|integer',
-             'available'=>'',
-             'price'=>'',
-             'delivery'=>'in:1,0',
-             'disc'=>'required|numeric',
-             'image'=>'sometimes|nullable|numeric',
-             'title'=>'sometimes|nullable|file|image',
+             'available'=>'required|string|in:1,0',
+             'price'=>'required|numeric',
+             'delivery'=>'required|numeric|in:1,0',
+             'disc'=>'sometimes|nullable|string',
+             'image'=>'sometimes|nullable|file|image',
+             'title'=>'sometimes|nullable|string',
 		];
 	}
 
@@ -39,12 +39,12 @@ class ServicesusRequest extends FormRequest {
 	protected function onUpdate() {
 		return [
              'category_id'=>'required|integer',
-             'available'=>'',
-             'price'=>'',
-             'delivery'=>'in:1,0',
-             'disc'=>'required|numeric',
-             'image'=>'sometimes|nullable|numeric',
-             'title'=>'sometimes|nullable|file|image',
+             'available'=>'required|string|in:1,0',
+             'price'=>'required|numeric',
+             'delivery'=>'required|numeric|in:1,0',
+             'disc'=>'sometimes|nullable|string',
+             'image'=>'sometimes|nullable|file|image',
+             'title'=>'sometimes|nullable|string',
 		];
 	}
 

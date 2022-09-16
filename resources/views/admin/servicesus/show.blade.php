@@ -71,6 +71,10 @@
 				{!! $servicesus->disc !!}
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<b>{{trans('admin.title')}} :</b>
+				{!! $servicesus->title !!}
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<b>{{trans('admin.user_id')}} :</b>
 				@if(!empty($servicesus->user_id()->first()))
 			{{ $servicesus->user_id()->first()->first_name }}
@@ -91,17 +95,8 @@
 				{{ trans("admin.".$servicesus->delivery) }}
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="row">
-					<div class="col-md-8 col-lg-4 col-xs-12">
-					  <b>{{trans('admin.image')}} :</b>
-					</div>
-					<div class="col-md-2 col-lg-2 col-xs-12">
-						
-					</div>
-					<div class="col-md-2 col-lg-2 col-xs-12">
-						<a href="{{ it()->url($servicesus->image) }}" target="_blank"><i class="fa fa-download fa-2x"></i></a>
-					</div>
-				</div>
+				<b>{{trans('admin.image')}} :</b>
+				@include("admin.show_image",["image"=>$servicesus->image])
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<b>{{trans('admin.active')}} :</b>

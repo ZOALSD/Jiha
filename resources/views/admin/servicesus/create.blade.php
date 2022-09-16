@@ -71,7 +71,7 @@
         <label for="'image'">{{ trans('admin.image') }}</label>
         <div class="input-group">
             <div class="custom-file">
-                {!! Form::file('image',['class'=>'custom-file-input','placeholder'=>trans('admin.image'),"accept"=>it()->acceptedMimeTypes(""),"id"=>"image"]) !!}
+                {!! Form::file('image',['class'=>'custom-file-input','placeholder'=>trans('admin.image'),"accept"=>it()->acceptedMimeTypes("image"),"id"=>"image"]) !!}
                 {!! Form::label('image',trans('admin.image'),['class'=>'custom-file-label']) !!}
             </div>
             <div class="input-group-append">

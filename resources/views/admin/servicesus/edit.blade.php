@@ -99,12 +99,12 @@
 </div>
 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 image">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="form-group">
                 <label for="'image'">{{ trans('admin.image') }}</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        {!! Form::file('image',['class'=>'custom-file-input','placeholder'=>trans('admin.image'),"accept"=>it()->acceptedMimeTypes(""),"id"=>"image"]) !!}
+                        {!! Form::file('image',['class'=>'custom-file-input','placeholder'=>trans('admin.image'),"accept"=>it()->acceptedMimeTypes("image"),"id"=>"image"]) !!}
                         {!! Form::label('image',trans('admin.image'),['class'=>'custom-file-label']) !!}
                     </div>
                     <div class="input-group-append">
@@ -113,15 +113,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4" style="padding-top: 30px;">
-            <div class="row">
-                <div class="col-md-6">
-                    
-                </div>
-                <div class="col-md-6">
-                    <a href="{{ it()->url($servicesus->image) }}" target="_blank"><i class="fa fa-download fa-2x"></i></a>
-                </div>
-            </div>
+        <div class="col-md-2" style="padding-top: 30px;">
+            @include("admin.show_image",["image"=>$servicesus->image])
         </div>
     </div>
 </div>

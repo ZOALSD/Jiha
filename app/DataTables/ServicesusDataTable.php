@@ -21,14 +21,13 @@ class ServicesusDataTable extends DataTable
             ->addColumn('actions', 'admin.servicesus.buttons.actions')
             ->addColumn('available', '{{ trans("admin.".$available) }}')
             ->addColumn('delivery', '{{ trans("admin.".$delivery) }}')
-            ->addColumn('image', '<a href="{{ it()->url($image) }}" target="_blank"><i class="fa fa-download fa-2x"></i></a>')
+            ->addColumn('image', '{!! view("admin.show_image",["image"=>$image])->render() !!}')
             ->addColumn('active', '{{ trans("admin.".$active) }}')
-            ->addColumn('title', '{!! view("admin.show_image",["image"=>$title])->render() !!}')
    		->addColumn('created_at', '{{ date("Y-m-d H:i:s",strtotime($created_at)) }}')   		->addColumn('updated_at', '{{ date("Y-m-d H:i:s",strtotime($updated_at)) }}')            ->addColumn('checkbox', '<div  class="icheck-danger">
                   <input type="checkbox" class="selected_data" name="selected_data[]" id="selectdata{{ $id }}" value="{{ $id }}" >
                   <label for="selectdata{{ $id }}"></label>
                 </div>')
-            ->rawColumns(['checkbox','actions',"image","title",]);
+            ->rawColumns(['checkbox','actions',"image",]);
     }
   
 

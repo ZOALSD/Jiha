@@ -25,28 +25,28 @@ class ServicesusRequest extends FormRequest {
 	 */
 	protected function onCreate() {
 		return [
-             'user_id'=>'sometimes|nullable|integer',
+             'user_id'=>'sometimes|required|nullable',
              'category_id'=>'required|integer',
-             'available'=>'',
-             'price'=>'',
-             'delivery'=>'in:1,0',
-             'disc'=>'required|string',
+             'available'=>'required|string|in:1,0',
+             'price'=>'required|numeric',
+             'delivery'=>'required|numeric|in:1,0',
+             'disc'=>'sometimes|nullable|string',
              'image'=>'sometimes|nullable|file|image',
-             'active'=>'',
+             'active'=>'sometimes|nullable|numeric|in:1,0',
              'title'=>'sometimes|nullable|string',
 		];
 	}
 
 	protected function onUpdate() {
 		return [
-             'user_id'=>'sometimes|nullable|integer',
+             'user_id'=>'sometimes|required|nullable',
              'category_id'=>'required|integer',
-             'available'=>'',
-             'price'=>'',
-             'delivery'=>'in:1,0',
-             'disc'=>'required|string',
+             'available'=>'required|string|in:1,0',
+             'price'=>'required|numeric',
+             'delivery'=>'required|numeric|in:1,0',
+             'disc'=>'sometimes|nullable|string',
              'image'=>'sometimes|nullable|file|image',
-             'active'=>'',
+             'active'=>'sometimes|nullable|numeric|in:1,0',
              'title'=>'sometimes|nullable|string',
 		];
 	}
